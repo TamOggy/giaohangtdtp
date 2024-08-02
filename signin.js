@@ -18,7 +18,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     // Kiểm tra email và password
     if (validateSignIn()) {
         alert("ĐĂNG NHẬP THÀNH CÔNG");
-        window.location.href = "http://127.0.0.1:5500/order.html";
+        window.location.href = "./order.html";
     } else {
         alert("Bạn đã nhập sai email hoặc mật khẩu");
     }
