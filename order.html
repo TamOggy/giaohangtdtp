@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./order.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/73477126b6.js" crossorigin="anonymous"></script>
+</head>
+<body>    
+  <div style="display: flex; justify-content: center; background-color: #F2AD48;"><h5>GIAO HÀNG TDTP</h5></div>
+    <div class="header">
+      <div class="grid">
+        <nav class="header__navbar">
+          <ul class="header__navbar-list">
+            <li class="navbar-item navbar-item-img">
+              <img src="Img\anhnen.png" alt="" class=navbar__Img>
+            </li>
+            <li class="navbar-item">
+              <a href="./index.html" class="header__navbar-item-link">Trang chủ</a>
+            </li>
+            <!-- dich vu -->
+            <li class="navbar-item navbar-item--has--service">
+              <a href="#" class="header__navbar-item-link">Dịch vụ</a>
+              <div class="header__service">
+                <ul class="header__service-list">
+                  <li>
+                    <a class="header__service-link" href="#">
+                <img src="Img\giao-hang-nhanh-canh-tranh-khoc-liet.jpg" alt="" class="header__service-img" >
+               <div  class="header__service-info"><span> Đơn hàng giao nhanh </span></div>
+              </a>
+                  </li>
+                  <li>
+                    <a class="header__service-link" href="#">
+                <img src="Img\images.png" alt="" class="header__service-img" >
+                <div class="header__service-info"><span> Đơn hàng giao tiết kiệm </span></div>
+              </a>
+                  </li>
+              </ul>
+            </div>
+            </li>
+            <!-- Gioi thieu -->
+            <li class="navbar-item navbar-item--has--introduce">
+              <a src="#" class="header__navbar-item-link">Giới thiệu</a>
+              <div class="header__introduce">
+                <ul class="header__introduce-list">
+                    <li><a class="header__introduce-link" href="">Về giao hàng TDTP</a></li>
+                    <li><a class="header__introduce-link" href="">Công nghệ</a></li>
+                    <li><a class="header__introduce-link" href="">Gói giao hàng</a></li>
+                    <li><a class="header__introduce-link" href="">Bưu Cục</a></li>
+                    <li><a class="header__introduce-link" href="">Tuyển dụng</a></li>
+                    <li><a class="header__introduce-link" href="">Liên hệ</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- Ho tro -->
+            <li class="navbar-item navbar-item--has--support">
+              <a href="#" class="header__navbar-item-link">Hỗ trợ</a>
+              <div class="header__support">
+                <ul class="header__support-list">
+                <li><a href="" class="header__support-link">Câu hỏi thường gặp</a></li>
+                <li><a href="" class="header__support-link">Quy định khiếu nại</a></li>
+                <li><a href="" class="header__support-link">Hàng hóa không vận chuyển</a></li>
+                <li><a href="" class="header__support-link">Chính sách bồi thường</a></li>
+                <li><a href="" class="header__support-link">Điều khoản sử dụng</a></li>
+                <li><a href="" class="header__support-link">Chính sách sử dụng</a></li>
+              </ul>
+              </div>
+            </li>
+            <!-- Thong tin -->
+            <li class="navbar-item navbar-item--has--infomation ">
+              <a href="#" class="header__navbar-item-link">Thông tin</a>
+              <div class="header__information">
+                <ul class="header__information-list">
+                  <li><a href="" class="header__information-link">Tin tức</a></li>
+                  <li><a href="" class="header__information-link">Bảng giá</a></li>
+                  <li><a href="" class="header__information-link">Chiến binh TDTP</a></li>
+                  <li><a href="" class="header__information-link">Khuyến mãi</a></li>
+                  <li><a href="" class="header__information-link">Kiến thức giao hàng</a></li>
+                  <li><a href="" class="header__information-link">Tip bán hàng</a></li>
+                </ul>
+              </div>
+            </li>
+          <li class="navbar-item navbar-item--has--user ">
+              <button class="header__navbar-button-sign header__navbar-item-user" id="header__navbar-button--user"><span class="user_item">username</span></button>
+              <div class="header__user">
+                <ul class="header__user-list">
+                  <li><a href="./signinfo.html" class="header__user-link">Chỉnh Sửa thông tin</a></li>
+                  <li><a href="./index.html" class="header__user-link">Đăng Xuất</a></li>
+                </ul>
+                </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+  </div>
+    <div class="container_Oder">
+      <div class="main">
+        <!-- nút tìm kiếm -->
+        <div class="top">
+            <div id="btn-add">
+                <button class="add-order-btn" >Tạo đơn</button>
+            </div>
+            <div class="search">
+                <input type="text" onkeypress="filterSearch()" placeholder="Search" class="search-inp" id="search-btn-id">
+            </div>
+        </div>
+    <!-- bảng thông tin đơn hàng -->
+    <table class="table table-hover" id="table">
+        <thead>
+            <tr style="background-color: #F1BCB1;">
+                <th class="col1">#</th>
+                <th>Mã vận đơn</th>
+                <th>Nội dung hàng hóa</th>
+                <th>Cod</th>
+                <th>Thời gian tạo</th>
+                <th id="showModal" class="col11"></th>
+                <!-- <th>Tên người gửi</th>
+                <th>Số điện thoại người gửi</th>
+                <th>Tên người nhận</th>
+                <th>Số điện thoại người nhận</th>
+                <th>Địa chỉ người nhận</th>
+                <th>Trạng thái</th> -->
+            </tr>
+        </thead> 
+        <tbody id="tbody">
+        </tbody>
+      </table>
+    </div>
+      <!-- form -->
+    <form id="form-id">
+            <div class="exit" id="exit-form-btn">
+                <i class="fa-solid fa-xmark fa-xl"></i>
+            </div>
+            <!-- <div class="item">
+                <label>Mã vận đơn</label><br>
+                <input type="text" class="inp" id="billCode" name="billCode">
+            </div> -->
+            <div class="item">
+                <label>Nội dung hàng hóa</label><br>
+                <input type="text" class="inp" id="content" name="content">
+            </div>
+            <div class="item">
+                <label>Cod</label><br>
+                <input type="text" class="inp" id="cod" name="cod">
+            </div>
+            <div class="item">
+                <label>Tên người gửi</label><br>
+                <input type="text" class="inp" id="sender" name="sender">
+            </div>        
+            <div class="item">
+                <label>Số điện thoại người gửi</label><br>
+                <input type="text" class="inp" id="numOfSender" name="numOfSender">
+            </div>                
+            <div class="item">
+                <label>Tên người nhận</label><br>
+                <input type="text" class="inp" id="receiver" name="receiver">
+            </div>        
+            <div class="item">
+                <label>Số điện thoại người nhận</label><br>
+                <input type="text" class="inp" id="numOfReceiver" name="numOfReceiver">
+            </div>        
+            <div class="item last-item">
+                <label>Địa chỉ người nhận</label><br>
+                <input type="text" class="inp" id="address" name="address">
+            </div>
+            <div class="btn">
+                <button type="submit">Tạo đơn</button>
+            </div>        
+    </form>
+    <!-- Modal thông tin đặt hàng -->
+     <div id="modal" class="modal content-modal">
+        <h1 style="text-align: center;">Quản lý thông tin đặt hàng</h1>
+        <div class="main-modal">
+            <div class="header-modal">
+                <div>
+                    <button id="btn-closed" class="button"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div>
+                    <button id="btn-edit" class="button"><i class="fa-solid fa-pen"></i></button>
+                </div>
+                
+                    
+            </div>
+            <div class="body-modal">
+                <table class="table-modal">
+                    <thead>
+                        <tr style="background-color: #F1BCB1;">
+                            <th class="col1">#</th>
+                            <th>Mã vận đơn</th>
+                            <th>Nội dung hàng hóa</th>
+                            <th>Cod</th>
+                            <th>Thời gian tạo</th>
+                            <th>Tên người gửi</th>
+                            <th>Số điện thoại người gửi</th>
+                            <th>Tên người nhận</th>
+                            <th>Số điện thoại người nhận</th>
+                            <th>Địa chỉ người nhận</th>
+                            <th>Trạng thái</th>
+                            <th>Hủy đơn</th>
+                        </tr>
+                    </thead> 
+                    <tbody id="tbody-modal">
+                    </tbody>
+                </table>
+    </div>
+    <form id="form-edit">
+        <h2>Chỉnh sửa</h2>
+        <div class="exit" id="exit-form-edit">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+        </div>
+        
+        <div class="item">
+            <label>Nội dung hàng hóa</label><br>
+            <input type="text" class="inp" id="content-edit" name="content">
+        </div>
+        <div class="item">
+            <label>Cod</label><br>
+            <input type="text" class="inp" id="cod-edit" name="cod">
+        </div>
+        <div class="item">
+            <label>Tên người gửi</label><br>
+            <input type="text" class="inp" id="sender-edit" name="sender">
+        </div>        
+        <div class="item">
+            <label>Số điện thoại người gửi</label><br>
+            <input type="text" class="inp" id="numOfSender-edit" name="numOfSender">
+        </div>                
+        <div class="item">
+            <label>Tên người nhận</label><br>
+            <input type="text" class="inp" id="receiver-edit" name="receiver">
+        </div>        
+        <div class="item">
+            <label>Số điện thoại người nhận</label><br>
+            <input type="text" class="inp" id="numOfReceiver-edit" name="numOfReceiver">
+        </div>        
+        <div class="item last-item">
+            <label>Địa chỉ người nhận</label><br>
+            <input type="text" class="inp" id="address-edit" name="address">
+        </div>
+        <div class="button">
+            <button id="btn-save" class="button"><i class="fa-solid fa-floppy-disk"></i></button>
+        </div>        
+        </form>
+    </div>
+    <script src="./order.js"></script>
+</body>
+</html>

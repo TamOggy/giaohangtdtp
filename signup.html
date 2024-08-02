@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+    <link rel="stylesheet" href="./signup.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="video-background"><video class="container__video" autoplay loop muted plays-inline>
+            <source src="Img\videocontainer.mp4" type="video/mp4"></video></div>
+        <div class="register-wrapper">
+            <h2>Tạo tài khoản</h2>
+            <h5>Chúng tôi luôn đồng hành cùng bạn</h5>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="purpose">Mục đích sử dụng</label>
+                    <select id="purpose" name="purpose" required>
+                        <option value="" disabled selected>Chọn mục đích sử dụng</option>
+                        <option value="personal">Cá nhân</option>
+                        <option value="business">Cửa hàng/Doanh nghiệp</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quy_mo">Quy mô vận chuyển</label>
+                    <select id="quy_mo" name="quy_mo" required>
+                        <option value="" disabled selected>Chọn quy mô</option>
+                        <option>Không có nhu cầu thường xuyên</option>
+                        <option>Dưới 100 ĐH/tháng</option>
+                        <option>Từ 100 - dưới 600 ĐH/tháng </option>
+                        <option>Từ 600 - dưới 1000 ĐH/tháng</option>
+                        <option>Từ 1000 - dưới 3000 ĐH/tháng</option>
+                        <option>Từ 3000 ĐH/tháng trở lên</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="hang_hoa">Ngành hàng</label>
+                    <select id="hang_hoa" name="hang_hoa" required>
+                        <option value="" disabled selected>Chọn ngành hàng</option>
+                        <option>Thời trang/Quần áo/Mỹ phẩm</option>
+                        <option>Thiết bị điện tử</option>
+                        <option>Sách & Văn phòng phẩm</option>
+                        <option>Nội thất</option>
+                        <option>Hàng hóa dễ vỡ</option>
+                        <option>Hàng tiêu dùng và tạp hóa</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Tên tài khoản</label>
+                    <input type="text" id="username" name="username" placeholder="Tên tài khoản" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" name="password" 
+                    placeholder="Tối thiểu 8 kí tự bao gồm chữ cái và số" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Xác nhận mật khẩu</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                    placeholder="Tối thiểu 8 kí tự bao gồm chữ cái và số" required>
+                </div>
+
+                <button type="submit">Đăng Ký</button>
+            </form>
+            <p id="successMessage" class="hidden">Đăng ký thành công!</p>
+            <p>Bạn đã có tài khoản? <a href="./signin.html">Đăng nhập tại đây</a></p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="signup.js"></script>
+</body>
+</html>
